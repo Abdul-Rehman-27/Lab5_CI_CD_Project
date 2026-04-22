@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest  # Use a virtual Linux environment
     steps:
       - uses: actions/checkout@v4  # Download your code
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-pythozn@v5
         with:
           python-version: '3.10'
       - run: python -m unittest discover  # Execute all tests
