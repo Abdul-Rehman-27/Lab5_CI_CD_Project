@@ -1,0 +1,12 @@
+name: Run Python Tests
+on: [push]  # Trigger automation on every code push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest  # Use a virtual Linux environment
+    steps:
+      - uses: actions/checkout@v4  # Download your code
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - run: python -m unittest discover  # Execute all tests
